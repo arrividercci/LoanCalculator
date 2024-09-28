@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoanCalculator.View.LoanProgramsPage"
+             Title="LoanProgramsPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Label Text="Оберіть програму кредитування" 
+               FontSize="Large" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" />
+            <CollectionView x:Name="LoanProgramsCollection" SelectionMode="Single" SelectionChanged="OnSelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="#4CAF50" CornerRadius="10" Padding="10" Margin="5" BackgroundColor="#F0F8FF" HasShadow="True" >
+                            <StackLayout>
+                                <Label Text="{Binding Name}" 
+                                   FontSize="Medium" 
+                                   FontAttributes="Bold" 
+                                   TextColor="#333" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Відсоткова ставка: "
+                                       FontSize="Small" 
+                                       TextColor="#777" />
+                                    <Label Text="{Binding InterestRate, StringFormat='{0}%'}"
+                                       FontSize="Small" 
+                                       TextColor="#00796B" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Термін: "
+                                       FontSize="Small" 
+                                       TextColor="#777" />
+                                    <Label Text="{Binding MonthTerm, StringFormat='{0} місяців'}"
+                                       FontSize="Small" 
+                                       TextColor="#00796B" />
+                                </StackLayout>
+                                <Label Text="{Binding Description}" 
+                                   FontSize="Small" 
+                                   TextColor="#555" 
+                                   Margin="0,5,0,0" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        <Button Text="Переглянути попередні розрахунки" Clicked="OnViewPreviousCalculationsClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoanCalculator.MainPage"
+             Padding="20">
+
+    <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+        <Image Source="money.jpg" 
+               Aspect="AspectFit"
+               HeightRequest="200" 
+               WidthRequest="200" 
+               HorizontalOptions="Center" />
+        <Label Text="This app is created to help you to calculate your loan program and improve your financial knowleage!" 
+               FontSize="24"
+               HorizontalOptions="Center" />
+        <Button Text="Старт" 
+                FontSize="18"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                CornerRadius="5"
+                Padding="10"
+                Clicked="OnStartButtonClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>

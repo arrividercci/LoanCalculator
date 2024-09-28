@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoanCalculator.CreditProgramsPage"
+             Title="Loan program selector.">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Choose credit program"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Picker x:Name="creditProgramsPicker"
+                Title="Credit programs">
+            <Picker.Items>
+                <x:String>Program 1</x:String>
+                <x:String>Program 2</x:String>
+                <x:String>Program 3</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Next" 
+                FontSize="18"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                CornerRadius="5"
+                Padding="10"
+                Clicked="OnNextButtonClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>
