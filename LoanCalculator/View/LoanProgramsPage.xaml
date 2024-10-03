@@ -12,7 +12,7 @@
             <CollectionView x:Name="LoanProgramsCollection" SelectionMode="Single" SelectionChanged="OnSelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="#4CAF50" CornerRadius="10" Padding="10" Margin="5" BackgroundColor="#F0F8FF" HasShadow="True" >
+                        <Frame BorderColor="#4CAF50" CornerRadius="10" Padding="20" Margin="5" BackgroundColor="#F0F8FF" HasShadow="True">
                             <StackLayout>
                                 <Label Text="{Binding Name}" 
                                    FontSize="Medium" 
@@ -44,6 +44,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         <Button Text="Переглянути попередні розрахунки" Clicked="OnViewPreviousCalculationsClicked" />
+        <Button Text="Про додаток" Clicked="OnInfoClicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
